@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const connect = axios.create({
-  baseURL: "http://localhost:7070",
+  baseURL: import.meta.env.VITE_URL || "http://localhost:7070",
 });
 
 export default class PostService {
